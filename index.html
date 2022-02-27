@@ -17,31 +17,43 @@
     <title>Players Details</title>
   </head>
   <body>
+    <main>
+      <div class="input-group mt-3 w-50 mx-auto">
+        <input
+          type="text"
+          id="search-input"
+          class="form-control"
+          placeholder="Search Player"
+          aria-label="Search Player"
+          aria-describedby="button-addon2"
+        />
+        <button
+          onclick="searchPlayer()"
+          type="button"
+          class="btn btn-outline-success"
+        >
+          Search
+        </button>
+      </div>
+    </main>
+    <div class="text-center mt-5" id="error-message"></div>
+    <p id="error">something went wrong try again later</p>
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <div class="input-group mt-3">
-            <input
-              type="text"
-              id="search-input"
-              class="form-control"
-              placeholder="Search Player"
-              aria-label="Search Player"
-              aria-describedby="button-addon2"
-            />
-            <button
-              onclick="searchPlayer()"
-              type="button"
-              class="btn btn-outline-success"
-            >
-              Search
-            </button>
-          </div>
+          <!--  -->
           <div id="players"></div>
         </div>
-        <div class="col-md-6"></div>
+        <div class="col-md-6 mt-5">
+          <section id="player-details" class=""></section>
+        </div>
       </div>
     </div>
+    <div
+      id="spiner"
+      class="spinner-grow text-warning position-absolute start-50"
+      role="status"
+    ></div>
     <script src="./app.js"></script>
   </body>
 </html>
